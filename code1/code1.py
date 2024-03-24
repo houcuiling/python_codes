@@ -25,7 +25,7 @@ else:
 cishu = 0
 # while 循环执行
 while x == "y":
-    number = random.randint(5, 6)
+    number = random.randint(1, 6)
     print("随机数", cishu, number)
     
     # if cishu == 3:
@@ -81,3 +81,5 @@ while x == "y":
     # time.sleep(1)
 
     x =  input("输入 y 重新摇骰子: ")
+
+print("结束摇骰子")
