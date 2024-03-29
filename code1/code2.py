@@ -133,3 +133,90 @@ print(word[2:4])
  0   1   2   3   4   5   6
 -6  -5  -4  -3  -2  -1
 """
+
+########################### 列表 ###########################
+# 20240329
+print("\n######### 列表 #########\n")
+
+# 1. 列表啥都能放
+liebiao = [1, 2, 3, 3213, 5]
+print(liebiao)
+
+zifuchuan_liebiao = ["P", "y", "t", "h", "on"]
+print(zifuchuan_liebiao)
+
+# 2. join 拼接函数
+# 注意只能拼接字符串列表，数字或者其他列表不行
+print(",".join(zifuchuan_liebiao))
+print("-".join(zifuchuan_liebiao))
+print(" ".join(zifuchuan_liebiao))
+print("".join(zifuchuan_liebiao))
+print(" haha ".join(zifuchuan_liebiao))
+
+# 3. 列表切片
+print(zifuchuan_liebiao[0])
+print(liebiao[-2])
+
+print(zifuchuan_liebiao[-3:])
+print("".join(zifuchuan_liebiao[-3:]))
+
+# 4. 列表合并
+print(liebiao)
+print(liebiao + [6, 7, 8])
+liebiao.extend([6, 7, 8])  # extend 函数等价于 liebiao = liebiao + [6, 7, 8]
+print("new_list", liebiao)
+
+# 5. 修改列表
+liebiao[3] = 4  # 修改 3213 为 4
+print("new_list xiugai 1)", liebiao)
+
+print(liebiao[2:5])
+liebiao[2:5] = [5, 4, 3]  # 一次性切片修改三个值
+print("new_list xiugai 2)", liebiao)
+
+# 6. 列表新增
+liebiao.append(9)  # 添加 9
+print("new_list add 1)", liebiao)
+
+liebiao.append(10)  # 添加 10
+print("new_list add 2)", liebiao)
+
+# 7. 常用
+test_list = []
+
+# 添加元素到列表
+test_list.append(1.0)
+test_list.append("test")
+print(test_list)
+
+# 拓展列表
+test_list.extend([53])
+print(test_list)
+
+# 判断一个值是否在列表内
+if "lijianran" in test_list:  # in 在里面
+    print("find jianran")
+else:
+    test_list.append("lijianran")
+
+# 计算某个值出现的次数
+print("字符串 'lijianran' 出现的次数是", test_list.count("lijianran"))
+
+# 某个元素的索引   从0开始算，第一次匹配到的位置
+print("字符串 'test' 是列表中第几个：", test_list.index("test"))
+
+# 删除元素
+test_list.remove("lijianran")
+
+# 列表元素个数 长度
+print("test_list 的长度是", len(test_list))
+
+# join 拼接字符串列表
+test_list[0] = "1.0"
+test_list[2] = "53"
+print(test_list)
+print("--这里随便写你想拼接在中间的字符串--".join(test_list))
+
+# 反转列表
+test_list.reverse()
+print(test_list)
